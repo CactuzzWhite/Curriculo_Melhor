@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo Melhora Aqui</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:2.5rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    margin-top:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.preco{
+    font-size:2.5rem;
+    color:#0d6efd;
+    font-weight:bold;
+    text-align:center;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Currículo Melhora Aqui</h1>
+    <p>Criação e atualização de currículos profissionais</p>
+    <a class="btn" href="https://wa.me/5512997087781">
+        Solicitar Meu Currículo
+    </a>
+</header>
+
+<section>
+    <div class="card">
+        <h2>Por que atualizar seu currículo?</h2>
+        <p>
+            Um currículo organizado e profissional aumenta suas chances
+            de ser chamado para entrevistas e conquistar novas oportunidades.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>O que está incluso?</h2>
+        <ul>
+            <li>✔ Correção de erros</li>
+            <li>✔ Organização profissional</li>
+            <li>✔ Layout moderno</li>
+            <li>✔ Atualização de informações</li>
+            <li>✔ Entrega rápida</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Preço Promocional</h2>
+        <p class="preco">R$ 20,00</p>
+    </div>
+
+    <div class="card">
+        <h2>Contato</h2>
+        <p>📞 (12) 99708-7781</p>
+        <p>📧 curriculomelhoraqui@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Currículo Melhora Aqui
+</footer>
+
+</body>
+</html>  
