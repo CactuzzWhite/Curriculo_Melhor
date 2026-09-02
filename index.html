@@ -116,7 +116,98 @@ header p {
     height: 20px;
     fill: white;
 }
+/* CURRÍCULOS DECORATIVOS NAS LATERAIS */
+.curriculo-decorativo {
+    position: fixed;
+    top: 50%;
+    width: 170px;
+    height: 230px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+    padding: 15px;
+    opacity: 0.85;
+    z-index: -1;
+    transform: translateY(-50%) rotate(-5deg);
+}
 
+/* CURRÍCULO DA ESQUERDA */
+.curriculo-esquerda {
+    left: 20px;
+}
+
+/* CURRÍCULO DA DIREITA */
+.curriculo-direita {
+    right: 20px;
+    transform: translateY(-50%) rotate(5deg);
+}
+
+/* CABEÇALHO DO CURRÍCULO */
+.curriculo-topo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.curriculo-foto {
+    width: 35px;
+    height: 35px;
+    background: #073b7a;
+    border-radius: 50%;
+}
+
+.curriculo-nome {
+    width: 80px;
+    height: 8px;
+    background: #073b7a;
+    border-radius: 4px;
+}
+
+/* LINHAS DO CURRÍCULO */
+.curriculo-linha {
+    height: 6px;
+    background: #d9d9d9;
+    border-radius: 3px;
+    margin: 7px 0;
+}
+
+.curriculo-linha.pequena {
+    width: 60%;
+}
+
+.curriculo-linha.media {
+    width: 80%;
+}
+
+.curriculo-linha.grande {
+    width: 100%;
+}
+
+/* TÍTULOS */
+.curriculo-titulo {
+    width: 55%;
+    height: 8px;
+    background: #0d6efd;
+    border-radius: 4px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+
+/* ÍCONE DE TECNOLOGIA */
+.tech-icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 20px;
+}
+
+/* ESCONDE EM TELAS MENORES */
+@media (max-width: 1200px) {
+    .curriculo-decorativo {
+        display: none;
+    }
+}
 /* SEÇÕES */
 section {
     max-width: 1000px;
@@ -169,6 +260,64 @@ footer {
 </head>
 
 <body>
+    <!-- CURRÍCULO DECORATIVO ESQUERDO -->
+<div class="curriculo-decorativo curriculo-esquerda">
+
+    <div class="tech-icon">💻</div>
+
+    <div class="curriculo-topo">
+        <div class="curriculo-foto"></div>
+
+        <div>
+            <div class="curriculo-nome"></div>
+            <div class="curriculo-linha pequena"></div>
+        </div>
+    </div>
+
+    <div class="curriculo-titulo"></div>
+    <div class="curriculo-linha grande"></div>
+    <div class="curriculo-linha media"></div>
+    <div class="curriculo-linha grande"></div>
+
+    <div class="curriculo-titulo"></div>
+    <div class="curriculo-linha media"></div>
+    <div class="curriculo-linha grande"></div>
+    <div class="curriculo-linha pequena"></div>
+
+    <div class="curriculo-titulo"></div>
+    <div class="curriculo-linha media"></div>
+
+</div>
+
+
+<!-- CURRÍCULO DECORATIVO DIREITO -->
+<div class="curriculo-decorativo curriculo-direita">
+
+    <div class="tech-icon">⚙️</div>
+
+    <div class="curriculo-topo">
+        <div class="curriculo-foto"></div>
+
+        <div>
+            <div class="curriculo-nome"></div>
+            <div class="curriculo-linha pequena"></div>
+        </div>
+    </div>
+
+    <div class="curriculo-titulo"></div>
+    <div class="curriculo-linha grande"></div>
+    <div class="curriculo-linha media"></div>
+    <div class="curriculo-linha grande"></div>
+
+    <div class="curriculo-titulo"></div>
+    <div class="curriculo-linha grande"></div>
+    <div class="curriculo-linha pequena"></div>
+    <div class="curriculo-linha media"></div>
+
+    <div class="curriculo-titulo"></div>
+    <div class="curriculo-linha grande"></div>
+
+</div>
 
 <header>
 
@@ -280,3 +429,4 @@ footer {
 
 </body>
 </html>
+
