@@ -1,674 +1,440 @@
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Currículo Melhora Aqui</title>
-
-
-<style>
-
-/* ==================================================
-   CONFIGURAÇÕES GERAIS
-================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background: #f5f5f5;
-    color: #333;
-}
-
-
-/* ==================================================
-   CABEÇALHO
-================================================== */
-
-header {
-    background: #073b7a;
-    color: white;
-    text-align: center;
-
-    padding: 60px 20px 70px;
-
-    position: relative;
-}
-
-header h1 {
-    font-size: 2.5rem;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-}
-
-
-/* ==================================================
-   BOTÃO WHATSAPP
-================================================== */
-
-.btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-top: 20px;
-
-    background: #25D366;
-    color: white;
-
-    text-decoration: none;
-
-    padding: 15px 25px;
-
-    border-radius: 8px;
-
-    font-weight: bold;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.btn:hover {
-
-    transform: scale(1.10);
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,0.25);
-}
-
-
-/* ==================================================
-   ÍCONE WHATSAPP
-================================================== */
-
-.whatsapp-icon {
-
-    width: 22px;
-    height: 22px;
-
-    fill: white;
-}
-
-
-/* ==================================================
-   REDES SOCIAIS
-================================================== */
-
-.social-links {
-
-    position: absolute;
-
-    bottom: 15px;
-    right: 20px;
-
-    display: flex;
-
-    gap: 8px;
-
-    z-index: 10;
-}
-
-.social-btn {
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 38px;
-    height: 38px;
-
-    border-radius: 8px;
-
-    color: white;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.social-btn:hover {
-
-    transform: scale(1.10);
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.25);
-}
-
-
-/* INSTAGRAM */
-
-.instagram {
-    background: #E1306C;
-}
-
-
-/* FACEBOOK */
-
-.facebook {
-    background: #1877F2;
-}
-
-
-/* ÍCONES */
-
-.social-btn svg {
-
-    width: 20px;
-    height: 20px;
-
-    fill: white;
-}
-
-
-/* ==================================================
-   CURRÍCULOS LATERAIS
-================================================== */
-
-.curriculo-decorativo {
-
-    position: fixed;
-
-    top: 50%;
-
-    width: 230px;
-    height: 330px;
-
-    background: white;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.20);
-
-    overflow: hidden;
-
-    z-index: 1;
-
-    pointer-events: none;
-
-    transition:
-        transform 0.3s ease;
-}
-
-
-/* CURRÍCULO ESQUERDO */
-
-.curriculo-esquerda {
-
-    left: 25px;
-
-    transform:
-        translateY(-50%)
-        rotate(-4deg);
-}
-
-
-/* CURRÍCULO DIREITO */
-
-.curriculo-direita {
-
-    right: 25px;
-
-    transform:
-        translateY(-50%)
-        rotate(4deg);
-}
-
-
-/* ==================================================
-   TOPO DO CURRÍCULO
-================================================== */
-
-.cv-header {
-
-    background: #073b7a;
-
-    color: white;
-
-    padding: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-}
-
-
-/* FOTO */
-
-.cv-foto {
-
-    width: 48px;
-    height: 48px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #dbeafe,
-            #ffffff
-        );
-
-    border-radius: 50%;
-
-    border: 3px solid white;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 22px;
-}
-
-
-/* NOME */
-
-.cv-nome {
-
-    font-size: 15px;
-
-    font-weight: bold;
-
-    margin-bottom: 4px;
-}
-
-
-/* CARGO */
-
-.cv-cargo {
-
-    font-size: 9px;
-
-    opacity: 0.9;
-}
-
-
-/* ==================================================
-   CORPO DO CURRÍCULO
-================================================== */
-
-.cv-body {
-
-    padding: 14px 16px;
-}
-
-
-/* TÍTULOS */
-
-.cv-title {
-
-    color: #073b7a;
-
-    font-size: 10px;
-
-    font-weight: bold;
-
-    text-transform: uppercase;
-
-    border-bottom: 2px solid #0d6efd;
-
-    padding-bottom: 4px;
-
-    margin-top: 7px;
-
-    margin-bottom: 8px;
-}
-
-
-/* TEXTO */
-
-.cv-text {
-
-    font-size: 7px;
-
-    color: #777;
-
-    line-height: 1.5;
-
-    margin-bottom: 5px;
-}
-
-
-/* ==================================================
-   HABILIDADES
-================================================== */
-
-.skills {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 5px;
-
-    margin-top: 5px;
-}
-
-.skill {
-
-    background: #e8f1ff;
-
-    color: #073b7a;
-
-    border-radius: 4px;
-
-    padding: 4px 6px;
-
-    font-size: 7px;
-
-    font-weight: bold;
-}
-
-
-/* ==================================================
-   LINHAS DE EXPERIÊNCIA
-================================================== */
-
-.cv-job {
-
-    margin-bottom: 8px;
-}
-
-.cv-job-title {
-
-    font-size: 8px;
-
-    font-weight: bold;
-
-    color: #333;
-}
-
-.cv-job-company {
-
-    font-size: 7px;
-
-    color: #0d6efd;
-
-    margin-top: 2px;
-}
-
-.cv-line {
-
-    height: 4px;
-
-    background: #e2e2e2;
-
-    border-radius: 3px;
-
-    margin-top: 4px;
-}
-
-.cv-line.short {
-    width: 65%;
-}
-
-.cv-line.medium {
-    width: 82%;
-}
-
-.cv-line.long {
-    width: 100%;
-}
-
-
-/* ==================================================
-   ELEMENTOS DE TECNOLOGIA
-================================================== */
-
-.tech-symbol {
-
-    position: absolute;
-
-    right: 12px;
-    top: 12px;
-
-    font-size: 17px;
-}
-
-
-/* ==================================================
-   CONTEÚDO PRINCIPAL
-================================================== */
-
-section {
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 50px 20px;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* ==================================================
-   CARDS
-================================================== */
-
-.card {
-
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 10px;
-
-    margin-top: 20px;
-
-    box-shadow:
-        0 2px 10px rgba(0,0,0,0.10);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.card:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,0.14);
-}
-
-
-/* TÍTULOS */
-
-.card h2 {
-
-    color: #073b7a;
-
-    margin-bottom: 15px;
-}
-
-
-/* PARÁGRAFOS */
-
-.card p {
-
-    line-height: 1.6;
-}
-
-
-/* ==================================================
-   LISTA
-================================================== */
-
-.card ul {
-
-    list-style: none;
-
-    line-height: 2;
-}
-
-
-/* ==================================================
-   PREÇO
-================================================== */
-
-.preco {
-
-    font-size: 2.5rem;
-
-    color: #0d6efd;
-
-    font-weight: bold;
-
-    text-align: center;
-
-    margin-top: 10px;
-}
-
-
-/* ==================================================
-   CONTATO
-================================================== */
-
-.contato p {
-
-    margin: 8px 0;
-}
-
-
-/* ==================================================
-   RODAPÉ
-================================================== */
-
-footer {
-
-    background: #222;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 30px;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* ==================================================
-   RESPONSIVIDADE
-================================================== */
-
-/* Telas menores */
-
-@media (max-width: 1300px) {
-
-    .curriculo-decorativo {
-        display: none;
-    }
-
-}
-
-
-/* CELULAR */
-
-@media (max-width: 600px) {
-
-    header {
-
-        padding:
-            45px
-            15px
-            75px;
-    }
-
-    header h1 {
-
-        font-size: 2rem;
-    }
-
-    header p {
-
-        font-size: 1rem;
-    }
-
-    .btn {
-
-        padding:
-            14px
-            20px;
-
-        font-size: 0.95rem;
-    }
-
-    .social-links {
-
-        right: 50%;
-
-        transform:
-            translateX(50%);
-
-        bottom: 15px;
-    }
-
-    section {
-
-        padding:
-            30px
-            15px;
-    }
-
-    .card {
-
-        padding: 20px;
-    }
-
-    .preco {
-
-        font-size: 2.2rem;
-    }
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currículo Melhora Aqui</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            background: #073b7a;
+            color: white;
+            text-align: center;
+            padding: 60px 20px 70px;
+            position: relative;
+            overflow: visible;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           BOTÃO WHATSAPP
+        ========================= */
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: 0.2s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.10);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .whatsapp-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        /* =========================
+           REDES SOCIAIS
+        ========================= */
+
+        .social-links {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s ease;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.10);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .social-btn svg {
+            width: 21px;
+            height: 21px;
+            fill: white;
+        }
+
+        .instagram {
+            background: #E1306C;
+        }
+
+        .facebook {
+            background: #1877F2;
+        }
+
+        /* =========================
+           CURRÍCULOS DECORATIVOS
+        ========================= */
+
+        .curriculo-decorativo {
+            position: fixed;
+            top: 190px;
+            width: 230px;
+            height: 330px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .curriculo-esquerda {
+            left: 25px;
+            transform: rotate(-4deg);
+        }
+
+        .curriculo-direita {
+            right: 25px;
+            transform: rotate(4deg);
+        }
+
+        .cv-header {
+            background: #0b4f9c;
+            color: white;
+            padding: 18px;
+            text-align: center;
+        }
+
+        /* Ícone da câmera/computador */
+
+        .cv-foto {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 8px;
+            background: white;
+            color: #073b7a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .cv-nome {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .cv-cargo {
+            font-size: 11px;
+            margin-top: 2px;
+        }
+
+        .cv-body {
+            padding: 14px;
+        }
+
+        .cv-title {
+            color: #073b7a;
+            font-size: 12px;
+            font-weight: bold;
+            border-bottom: 2px solid #073b7a;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
+        }
+
+        .cv-text {
+            font-size: 9px;
+            margin-bottom: 10px;
+        }
+
+        .cv-job {
+            margin-bottom: 8px;
+        }
+
+        .cv-job-title {
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .cv-job-company {
+            font-size: 9px;
+            color: #666;
+        }
+
+        .cv-line {
+            height: 4px;
+            background: #ddd;
+            margin: 4px 0;
+            border-radius: 4px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 5px;
+        }
+
+        .skill {
+            background: #e9f2ff;
+            color: #073b7a;
+            font-size: 8px;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        /* =========================
+           CONTEÚDO PRINCIPAL
+        ========================= */
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            color: #073b7a;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-bottom: 12px;
+        }
+
+        .lista {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .lista li {
+            margin-bottom: 10px;
+        }
+
+        .lista li::before {
+            content: "✓";
+            color: #25D366;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* =========================
+           PREÇO
+        ========================= */
+
+        .preco {
+            text-align: center;
+        }
+
+        .preco h2 {
+            margin-bottom: 5px;
+        }
+
+        .valor {
+            color: #25D366;
+            font-size: 42px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contato p {
+            margin-bottom: 5px;
+        }
+
+        .contato strong {
+            color: #073b7a;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media (max-width: 1300px) {
+            .curriculo-decorativo {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 45px 15px 80px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            .social-links {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                bottom: 15px;
+            }
+
+            main {
+                padding: 0 12px;
+                margin-top: 25px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .valor {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
 
-<!-- ==================================================
-     CURRÍCULO DE TECNOLOGIA - ESQUERDA
-================================================== -->
+    <header>
 
-<div class="curriculo-decorativo curriculo-esquerda">
+        <h1>Currículo Melhora Aqui</h1>
 
+        <p>
+            Criação e atualização de currículos profissionais
+        </p>
 
-    <div class="cv-header">
+        <a
+            class="whatsapp-btn"
+            href="https://wa.me/5512997087781"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg viewBox="0 0 32 32">
+                <path d="M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.46-.84-2-.22-.52-.45-.45-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.64 1.11 2.82c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.59-.65 1.82-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32z"/>
+            </svg>
 
-        <div class="cv-foto">
-            💻
+            Falar pelo WhatsApp
+        </a>
+
+        <!-- Redes sociais -->
+
+        <div class="social-links">
+
+            <a
+                class="social-btn instagram"
+                href="https://www.instagram.com/curriculo_melhor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+            >
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.5a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+                </svg>
+            </a>
+
+            <a
+                class="social-btn facebook"
+                href="https://www.facebook.com/profile.php?id=61593176423856&locale=pt_BR"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+            >
+                <svg viewBox="0 0 24 24">
+                    <path d="M13.5 21v-8h2.75l.4-3h-3.15V8.08c0-.87.24-1.46 1.49-1.46h1.59V3.94c-.28-.04-1.25-.12-2.38-.12-2.35 0-3.96 1.43-3.96 4.06V10H7.5v3h2.74v8h3.26z"/>
+                </svg>
+            </a>
+
         </div>
 
-        <div>
+    </header>
+
+    <!-- =========================
+         CURRÍCULOS DECORATIVOS
+    ========================= -->
+
+    <!-- Currículo da esquerda - CÂMERA -->
+
+    <div class="curriculo-decorativo curriculo-esquerda">
+
+        <div class="cv-header">
+
+            <div class="cv-foto">
+                📷
+            </div>
 
             <div class="cv-nome">
                 João Silva
@@ -680,112 +446,72 @@ footer {
 
         </div>
 
+        <div class="cv-body">
+
+            <div class="cv-title">
+                PERFIL PROFISSIONAL
+            </div>
+
+            <div class="cv-text">
+                Profissional dedicado, organizado e
+                interessado em tecnologia e suporte técnico.
+            </div>
+
+            <div class="cv-title">
+                EXPERIÊNCIA
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job-title">
+                    Técnico de TI
+                </div>
+
+                <div class="cv-job-company">
+                    Empresa Tecnologia
+                </div>
+
+                <div class="cv-line"></div>
+                <div class="cv-line"></div>
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job-title">
+                    Assistente de Suporte
+                </div>
+
+                <div class="cv-job-company">
+                    Empresa Digital
+                </div>
+
+                <div class="cv-line"></div>
+            </div>
+
+            <div class="cv-title">
+                HABILIDADES
+            </div>
+
+            <div class="skills">
+                <span class="skill">Windows</span>
+                <span class="skill">Redes</span>
+                <span class="skill">Hardware</span>
+                <span class="skill">Suporte</span>
+                <span class="skill">Office</span>
+            </div>
+
+        </div>
+
     </div>
 
 
-    <div class="cv-body">
+    <!-- Currículo da direita - COMPUTADOR -->
 
+    <div class="curriculo-decorativo curriculo-direita">
 
-        <div class="cv-title">
-            Perfil
-        </div>
+        <div class="cv-header">
 
-        <div class="cv-text">
-
-            Profissional de Tecnologia
-            com experiência em suporte,
-            manutenção e atendimento.
-
-        </div>
-
-
-        <div class="cv-title">
-            Experiência
-        </div>
-
-
-        <div class="cv-job">
-
-            <div class="cv-job-title">
-                Técnico de TI
+            <div class="cv-foto">
+                💻
             </div>
-
-            <div class="cv-job-company">
-                Empresa Tecnologia
-            </div>
-
-            <div class="cv-line long"></div>
-
-            <div class="cv-line medium"></div>
-
-        </div>
-
-
-        <div class="cv-job">
-
-            <div class="cv-job-title">
-                Assistente de Suporte
-            </div>
-
-            <div class="cv-job-company">
-                Empresa Digital
-            </div>
-
-            <div class="cv-line long"></div>
-
-        </div>
-
-
-        <div class="cv-title">
-            Habilidades
-        </div>
-
-
-        <div class="skills">
-
-            <span class="skill">
-                Windows
-            </span>
-
-            <span class="skill">
-                Redes
-            </span>
-
-            <span class="skill">
-                Hardware
-            </span>
-
-            <span class="skill">
-                Suporte
-            </span>
-
-            <span class="skill">
-                Office
-            </span>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-
-
-<!-- ==================================================
-     CURRÍCULO DE TECNOLOGIA - DIREITA
-================================================== -->
-
-<div class="curriculo-decorativo curriculo-direita">
-
-
-    <div class="cv-header">
-
-        <div class="cv-foto">
-            &lt;/&gt;
-        </div>
-
-        <div>
 
             <div class="cv-nome">
                 Ana Oliveira
@@ -797,337 +523,186 @@ footer {
 
         </div>
 
+        <div class="cv-body">
+
+            <div class="cv-title">
+                PERFIL PROFISSIONAL
+            </div>
+
+            <div class="cv-text">
+                Desenvolvedora focada em tecnologia,
+                desenvolvimento web e soluções digitais.
+            </div>
+
+            <div class="cv-title">
+                EXPERIÊNCIA
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job-title">
+                    Desenvolvedora Web
+                </div>
+
+                <div class="cv-job-company">
+                    Tech Solutions
+                </div>
+
+                <div class="cv-line"></div>
+                <div class="cv-line"></div>
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job-title">
+                    Desenvolvedora Jr.
+                </div>
+
+                <div class="cv-job-company">
+                    Digital Company
+                </div>
+
+                <div class="cv-line"></div>
+            </div>
+
+            <div class="cv-title">
+                HABILIDADES
+            </div>
+
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Git</span>
+                <span class="skill">SQL</span>
+            </div>
+
+        </div>
+
     </div>
 
 
-    <div class="cv-body">
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================= -->
 
+    <main>
 
-        <div class="cv-title">
-            Perfil
+        <div class="card">
+
+            <h2>
+                Deixe seu currículo mais profissional!
+            </h2>
+
+            <p>
+                Um bom currículo é o primeiro passo para
+                conquistar novas oportunidades.
+            </p>
+
+            <p>
+                O <strong>Currículo Melhora Aqui</strong>
+                oferece serviços de criação, atualização
+                e organização de currículos, deixando seu
+                documento mais profissional, claro,
+                organizado e atrativo para os recrutadores.
+            </p>
+
+            <p>
+                Analisamos e aprimoramos as informações
+                do seu currículo, corrigimos erros,
+                organizamos suas experiências e qualificações
+                e aplicamos um layout moderno e profissional.
+            </p>
+
         </div>
 
-        <div class="cv-text">
 
-            Desenvolvedora focada em
-            tecnologia, soluções digitais
-            e desenvolvimento web.
+        <div class="card">
+
+            <h2>
+                O que está incluso?
+            </h2>
+
+            <ul class="lista">
+
+                <li>Criação de currículo</li>
+
+                <li>Atualização de informações</li>
+
+                <li>Correção de erros</li>
+
+                <li>Organização das experiências profissionais</li>
+
+                <li>Layout moderno e profissional</li>
+
+                <li>Currículo objetivo e fácil de ler</li>
+
+                <li>Entrega rápida</li>
+
+            </ul>
 
         </div>
 
 
-        <div class="cv-title">
-            Experiência
-        </div>
+        <div class="card preco">
 
+            <h2>
+                Preço Promocional
+            </h2>
 
-        <div class="cv-job">
-
-            <div class="cv-job-title">
-                Desenvolvedora Web
+            <div class="valor">
+                R$ 20,00
             </div>
 
-            <div class="cv-job-company">
-                Tech Solutions
-            </div>
+            <p>
+                Serviço completo de criação ou atualização
+                do seu currículo.
+            </p>
 
-            <div class="cv-line long"></div>
+            <br>
 
-            <div class="cv-line short"></div>
-
-        </div>
-
-
-        <div class="cv-job">
-
-            <div class="cv-job-title">
-                Desenvolvedora Jr.
-            </div>
-
-            <div class="cv-job-company">
-                Digital Company
-            </div>
-
-            <div class="cv-line medium"></div>
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/5512997087781"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Solicitar meu currículo
+            </a>
 
         </div>
 
 
-        <div class="cv-title">
-            Tecnologias
-        </div>
+        <div class="card contato">
 
+            <h2>
+                Entre em contato
+            </h2>
 
-        <div class="skills">
+            <p>
+                <strong>WhatsApp:</strong>
+                (12) 99708-7781
+            </p>
 
-            <span class="skill">
-                HTML
-            </span>
-
-            <span class="skill">
-                CSS
-            </span>
-
-            <span class="skill">
-                JavaScript
-            </span>
-
-            <span class="skill">
-                Git
-            </span>
-
-            <span class="skill">
-                SQL
-            </span>
+            <p>
+                <strong>E-mail:</strong>
+                curriculomelhoraqui@gmail.com
+            </p>
 
         </div>
 
-
-    </div>
-
-</div>
+    </main>
 
 
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
 
-<!-- ==================================================
-     CABEÇALHO PRINCIPAL
-================================================== -->
+    <footer>
 
-<header>
-
-
-    <h1>
-        Currículo Melhora Aqui
-    </h1>
-
-
-    <p>
+        © 2026 Currículo Melhora Aqui -
         Criação e atualização de currículos profissionais
-    </p>
 
-
-    <!-- BOTÃO WHATSAPP -->
-
-    <a
-        class="btn"
-        href="https://wa.me/5512997087781"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-
-
-        <svg
-            class="whatsapp-icon"
-            viewBox="0 0 24 24"
-        >
-
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.198.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-
-            <path d="M20.52 3.449A11.8 11.8 0 0 0 12.086 0C5.565 0 .26 5.305.257 11.826c0 2.087.545 4.124 1.581 5.92L.193 24l6.392-1.677a11.82 11.82 0 0 0 5.496 1.4h.005c6.52 0 11.825-5.305 11.828-11.827a11.8 11.8 0 0 0-3.394-8.447zM12.09 21.785h-.004a9.83 9.83 0 0 1-5.012-1.371l-.36-.214-3.793.995 1.013-3.696-.235-.38a9.83 9.83 0 0 1-1.507-5.291C2.194 6.41 6.62 1.983 12.09 1.983a9.82 9.82 0 0 1 6.993 2.899 9.82 9.82 0 0 1 2.893 6.997c-.003 5.47-4.43 9.906-9.886 9.906z"/>
-
-        </svg>
-
-
-        Solicitar Meu Currículo
-
-    </a>
-
-
-
-    <!-- ==================================================
-         REDES SOCIAIS
-    ================================================== -->
-
-    <div class="social-links">
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-            class="social-btn instagram"
-            href="https://www.instagram.com/curriculo_melhor/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-        >
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-0-6z"/>
-
-            </svg>
-
-        </a>
-
-
-
-        <!-- FACEBOOK -->
-
-        <a
-            class="social-btn facebook"
-            href="https://www.facebook.com/profile.php?id=61593176423856&locale=pt_BR"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-        >
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"/>
-
-            </svg>
-
-        </a>
-
-    </div>
-
-</header>
-
-
-
-<!-- ==================================================
-     CONTEÚDO PRINCIPAL
-================================================== -->
-
-<section>
-
-
-    <!-- POR QUE ATUALIZAR -->
-
-    <div class="card">
-
-        <h2>
-            Por que atualizar seu currículo?
-        </h2>
-
-        <p>
-            Um currículo organizado e profissional aumenta suas chances
-            de ser chamado para entrevistas e conquistar novas oportunidades.
-        </p>
-
-    </div>
-
-
-
-    <!-- SERVIÇOS -->
-
-    <div class="card">
-
-        <h2>
-            O que está incluso?
-        </h2>
-
-        <ul>
-
-            <li>
-                ✔ Correção de erros
-            </li>
-
-            <li>
-                ✔ Organização profissional
-            </li>
-
-            <li>
-                ✔ Layout moderno
-            </li>
-
-            <li>
-                ✔ Atualização de informações
-            </li>
-
-            <li>
-                ✔ Entrega rápida
-            </li>
-
-        </ul>
-
-    </div>
-
-
-
-    <!-- DESCRIÇÃO DO SERVIÇO -->
-
-    <div class="card">
-
-        <h2>
-            Deixe seu currículo mais profissional!
-        </h2>
-
-        <p>
-
-            Um bom currículo é o primeiro passo para conquistar novas
-            oportunidades. O Currículo Melhora Aqui oferece serviços de
-            criação, atualização e organização de currículos, deixando seu
-            documento mais profissional, claro, organizado e atrativo para
-            os recrutadores.
-
-        </p>
-
-        <br>
-
-        <p>
-
-            Analisamos e aprimoramos as informações do seu currículo,
-            corrigimos erros, organizamos suas experiências e qualificações
-            e aplicamos um layout moderno e profissional.
-
-        </p>
-
-    </div>
-
-
-
-    <!-- PREÇO -->
-
-    <div class="card">
-
-        <h2>
-            Preço Promocional
-        </h2>
-
-        <p class="preco">
-            R$ 20,00
-        </p>
-
-    </div>
-
-
-
-    <!-- CONTATO -->
-
-    <div class="card contato">
-
-        <h2>
-            Contato
-        </h2>
-
-        <p>
-            📞 (12) 99708-7781
-        </p>
-
-        <p>
-            📧 curriculomelhoraqui@gmail.com
-        </p>
-
-    </div>
-
-
-</section>
-
-
-
-<!-- ==================================================
-     RODAPÉ
-================================================== -->
-
-<footer>
-
-    © 2026 Currículo Melhora Aqui
-
-</footer>
-
+    </footer>
 
 </body>
-
 </html>
 ```
