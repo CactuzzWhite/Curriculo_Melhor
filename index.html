@@ -1,13 +1,17 @@
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Currículo Melhora Aqui</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -21,6 +25,7 @@
             line-height: 1.6;
         }
 
+
         /* =========================
            CABEÇALHO
         ========================= */
@@ -29,7 +34,9 @@
             background: #073b7a;
             color: white;
             text-align: center;
-            padding: 60px 20px 70px;
+
+            padding: 60px 20px 75px;
+
             position: relative;
             overflow: hidden;
         }
@@ -37,12 +44,17 @@
         header h1 {
             font-size: 42px;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
         }
 
         header p {
             font-size: 20px;
             margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
         }
+
 
         /* =========================
            BOTÃO WHATSAPP
@@ -50,27 +62,36 @@
 
         .whatsapp-btn {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
             gap: 10px;
 
             background: #25D366;
             color: white;
+
             text-decoration: none;
 
             padding: 14px 24px;
+
             border-radius: 8px;
 
             font-weight: bold;
             font-size: 17px;
 
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
+            position: relative;
+            z-index: 5;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .whatsapp-btn:hover {
             transform: scale(1.10);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.30);
         }
 
         .whatsapp-btn svg {
@@ -79,17 +100,22 @@
             fill: white;
         }
 
+
         /* =========================
            REDES SOCIAIS
         ========================= */
 
         .social-links {
             position: absolute;
+
             right: 20px;
             bottom: 15px;
 
             display: flex;
+
             gap: 8px;
+
+            z-index: 10;
         }
 
         .social-btn {
@@ -102,18 +128,24 @@
             align-items: center;
             justify-content: center;
 
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .social-btn:hover {
-            transform: scale(1.10);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+            transform: scale(1.15);
+
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.30);
         }
 
         .social-btn svg {
             width: 21px;
             height: 21px;
+
             fill: white;
         }
 
@@ -125,6 +157,7 @@
             background: #1877F2;
         }
 
+
         /* =========================
            CÂMERA E COMPUTADOR
         ========================= */
@@ -132,16 +165,16 @@
         .decoracao {
             position: absolute;
 
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            font-size: 90px;
+            font-size: 85px;
 
-            opacity: 0.85;
+            opacity: 0.75;
 
             pointer-events: none;
 
@@ -151,17 +184,19 @@
         }
 
         .camera {
-            left: 45px;
-            top: 55px;
+            left: 35px;
+            top: 50px;
         }
 
         .computador {
-            right: 45px;
-            top: 55px;
+            right: 35px;
+            top: 50px;
+
             animation-delay: 0.5s;
         }
 
         @keyframes flutuar {
+
             0% {
                 transform: translateY(0);
             }
@@ -173,10 +208,12 @@
             100% {
                 transform: translateY(0);
             }
+
         }
 
+
         /* =========================
-           CONTEÚDO PRINCIPAL
+           CONTEÚDO
         ========================= */
 
         main {
@@ -214,6 +251,7 @@
             margin-bottom: 12px;
         }
 
+
         /* =========================
            LISTA
         ========================= */
@@ -238,6 +276,7 @@
             margin-right: 8px;
         }
 
+
         /* =========================
            PREÇO
         ========================= */
@@ -260,6 +299,7 @@
             margin: 10px 0;
         }
 
+
         /* =========================
            CONTATO
         ========================= */
@@ -271,6 +311,7 @@
         .contato strong {
             color: #073b7a;
         }
+
 
         /* =========================
            RODAPÉ
@@ -288,34 +329,46 @@
             margin-top: 40px;
         }
 
+
         /* =========================
-           RESPONSIVIDADE
+           TABLETS
         ========================= */
 
         @media (max-width: 900px) {
 
             .decoracao {
-                font-size: 70px;
+                font-size: 65px;
 
                 width: 100px;
                 height: 100px;
             }
 
             .camera {
-                left: 10px;
+                left: 5px;
                 top: 65px;
             }
 
             .computador {
-                right: 10px;
+                right: 5px;
                 top: 65px;
             }
+
+            header h1 {
+                font-size: 38px;
+            }
+
         }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
 
         @media (max-width: 650px) {
 
             header {
-                padding: 45px 15px 85px;
+                padding:
+                    45px 15px 85px;
             }
 
             header h1 {
@@ -326,19 +379,23 @@
                 font-size: 17px;
             }
 
-            /* Esconde os elementos decorativos em telas pequenas
-               para não atrapalhar o conteúdo */
+            /*
+             * Esconde câmera e computador
+             * em telas pequenas para não
+             * atrapalhar o conteúdo.
+             */
 
             .decoracao {
                 display: none;
             }
 
             .social-links {
-                left: 50%;
 
+                left: 50%;
                 right: auto;
 
-                transform: translateX(-50%);
+                transform:
+                    translateX(-50%);
 
                 bottom: 15px;
             }
@@ -356,11 +413,16 @@
             .valor {
                 font-size: 36px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          CABEÇALHO
@@ -368,29 +430,34 @@
 
     <header>
 
-        <!-- Câmera -->
+
+        <!-- CÂMERA -->
 
         <div class="decoracao camera">
             📷
         </div>
 
-        <!-- Computador -->
+
+        <!-- COMPUTADOR -->
 
         <div class="decoracao computador">
             💻
         </div>
 
 
+        <!-- TÍTULO -->
+
         <h1>
             Currículo Melhora Aqui
         </h1>
+
 
         <p>
             Criação e atualização de currículos profissionais
         </p>
 
 
-        <!-- Botão WhatsApp -->
+        <!-- WHATSAPP -->
 
         <a
             class="whatsapp-btn"
@@ -400,7 +467,9 @@
         >
 
             <svg viewBox="0 0 32 32">
+
                 <path d="M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.46-.84-2-.22-.52-.45-.45-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.64 1.11 2.82c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.59-.65 1.82-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32z"/>
+
             </svg>
 
             Falar pelo WhatsApp
@@ -414,7 +483,8 @@
 
         <div class="social-links">
 
-            <!-- Instagram -->
+
+            <!-- INSTAGRAM -->
 
             <a
                 class="social-btn instagram"
@@ -425,13 +495,15 @@
             >
 
                 <svg viewBox="0 0 24 24">
+
                     <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.5a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+
                 </svg>
 
             </a>
 
 
-            <!-- Facebook -->
+            <!-- FACEBOOK -->
 
             <a
                 class="social-btn facebook"
@@ -442,7 +514,9 @@
             >
 
                 <svg viewBox="0 0 24 24">
+
                     <path d="M13.5 21v-8h2.75l.4-3h-3.15V8.08c0-.87.24-1.46 1.49-1.46h1.59V3.94c-.28-.04-1.25-.12-2.38-.12-2.35 0-3.96 1.43-3.96 4.06V10H7.5v3h2.74v8h3.26z"/>
+
                 </svg>
 
             </a>
@@ -459,7 +533,7 @@
     <main>
 
 
-        <!-- Serviço -->
+        <!-- SOBRE O SERVIÇO -->
 
         <div class="card">
 
@@ -490,7 +564,7 @@
         </div>
 
 
-        <!-- O que está incluso -->
+        <!-- O QUE ESTÁ INCLUSO -->
 
         <div class="card">
 
@@ -533,7 +607,7 @@
         </div>
 
 
-        <!-- Preço -->
+        <!-- PREÇO -->
 
         <div class="card preco">
 
@@ -550,27 +624,10 @@
                 do seu currículo.
             </p>
 
-            <br>
-
-            <a
-                class="whatsapp-btn"
-                href="https://wa.me/5512997087781"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <svg viewBox="0 0 32 32">
-                    <path d="M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.46-.84-2-.22-.52-.45-.45-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.64 1.11 2.82c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.59-.65 1.82-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32z"/>
-                </svg>
-
-                Solicitar meu currículo
-
-            </a>
-
         </div>
 
 
-        <!-- Contato -->
+        <!-- CONTATO -->
 
         <div class="card contato">
 
@@ -604,6 +661,8 @@
 
     </footer>
 
+
 </body>
+
 </html>
 ```
